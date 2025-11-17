@@ -1,8 +1,9 @@
 body{
---color-primari: verd;
---color-secundari: lila;
+--color-primari: #539041;
+--color-secundari: #47488e;
 --color-terciari: groc;
 --color-quaternari: gris;
+--color-quinte: rgb(255,255,255);
 }
 
 .header{
@@ -14,14 +15,17 @@ body{
 }
 
 .logo{
-    height: 115px;
-    margin-left: 4px;
+    width: 55px;
+    margin-top: 17px;
+    margin-left: 19px;
+    margin-bottom: 17px;
 }
 
 .header-dreta{
+    height: 100%;
     display: flex;
-    background-color: brown;
     align-items: center;
+    justify-content: center;
 }
 
 .persona{
@@ -31,4 +35,50 @@ body{
 }
 
 .nom{
+    border-right: 1px solid black;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 12px;
+    padding-left: 12px;
+    color: var(--color-secundari);
+}
+
+.sortirSessio{
+    color: var(--color-secundari);
+    padding-left: 12px;
+}
+
+.titol{
+    text-align: center;
+    background-color: var(--color-secundari);
+    padding-bottom: 3px;
+}
+
+.menu{
+    background-color: var(--color-primari);
+    height: 100vh;
+    color: var(--color-quinte);
+    font-size: 16px;
+    padding: 0px;
+}
+
+.menu i{
+    padding-right: 20px;
+}
+
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu ul li{
+    list-style: none;
+   
+    border-bottom: 1px solid var(--color-quinte);
+    padding: 16px;
+    
+}
+
+.amaga{
+    display: none;
 }

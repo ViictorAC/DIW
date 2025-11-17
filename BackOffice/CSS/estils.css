@@ -46,6 +46,7 @@ body{
 .sortirSessio{
     color: var(--color-secundari);
     padding-left: 12px;
+    padding-right: 19px;
 }
 
 .titol{
@@ -69,6 +70,7 @@ body{
 .menu ul{
     padding: 0px;
     margin: 0px;
+
 }
 
 .menu ul li{

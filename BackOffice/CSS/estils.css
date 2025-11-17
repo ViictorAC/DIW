@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
 --color-primari: #539041;
 --color-secundari: #47488e;
 --color-terciari: groc;
 --color-quaternari: gris;
 --color-quinte: rgb(255,255,255);
-}
-
-.header{
+font-family: "Roboto", sans-serif;
 }
 
 .a_la_dreta{
@@ -46,13 +46,14 @@ body{
 .sortirSessio{
     color: var(--color-secundari);
     padding-left: 12px;
-    padding-right: 19px;
+    padding-right: 12px;
 }
 
 .titol{
     text-align: center;
     background-color: var(--color-secundari);
     padding-bottom: 3px;
+    color: var(--color-quinte);
 }
 
 .menu{
@@ -70,12 +71,16 @@ body{
 .menu ul{
     padding: 0px;
     margin: 0px;
-
+    
 }
 
-.menu ul li{
+.menu a{
+    text-decoration: none;
+    color: var(--color-quinte);
+}
+
+.menu li{
     list-style: none;
-   
     border-bottom: 1px solid var(--color-quinte);
     padding: 16px;
     
@@ -83,4 +88,8 @@ body{
 
 .amaga{
     display: none;
+}
+
+.inputs{
+    
 }

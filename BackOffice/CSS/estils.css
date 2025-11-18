@@ -1,41 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
---color-primari: #539041;
---color-secundari: #47488e;
---color-terciari: #f6b01f;
---color-quaternari: #ececec;
---color-quinari: #ffffff;
---color-senari: #94949d;
-font-family: "Roboto", sans-serif;
+body {
+    --color-primari: #539041;
+    --color-secundari: #47488e;
+    --color-terciari: #f6b01f;
+    --color-quaternari: #ececec;
+    --color-quinari: #ffffff;
+    --color-senari: #94949d;
+    font-family: "Roboto", sans-serif;
 }
 
-.a_la_dreta{
+.a_la_dreta {
     display: flex;
     justify-content: end;
 }
 
-.logo{
+.logo {
     width: 55px;
     margin-top: 17px;
     margin-left: 19px;
     margin-bottom: 17px;
 }
 
-.header-dreta{
+.header-dreta {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.persona{
+.persona {
     height: 70px;
     border-radius: 40px;
-    
 }
 
-.nom{
+.nom {
     border-right: 1px solid black;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -44,103 +42,211 @@ font-family: "Roboto", sans-serif;
     color: var(--color-secundari);
 }
 
-.sortirSessio{
+.sortirSessio {
     color: var(--color-secundari);
     padding-left: 14px;
     padding-right: 12px;
 }
 
-.titol{
+.titol {
     text-align: center;
     background-color: var(--color-secundari);
     padding-bottom: 3px;
     color: var(--color-quinari);
 }
 
-.menu{
-    background-color: var(--color-primari);
+.menu {
     height: 100vh;
-    color: var(--color-quinari);
     font-size: 16px;
     padding: 0px;
+    background-color: var(--color-primari);
 }
 
-.menu i{
+.menu i {
     padding-right: 20px;
+    margin-right: 9px;
 }
 
-.menu ul{
+.menu ul {
     padding: 0px;
     margin: 0px;
-    
+
 }
 
-.menu a{
+.menu a {
     text-decoration: none;
     color: var(--color-quinari);
 }
 
-.menu li{
+.menu li {
     list-style: none;
     border-bottom: 1px solid var(--color-quinari);
-    padding: 16px;
-    
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
 }
 
-.amaga{
-    display: none;
+.paginaActiva{
+    background-color: var(--color-secundari);
 }
 
-.nopadding{
+.menu li:hover {
+    background-color: var(--color-secundari);
+    font-weight: bold;
+}
+
+
+.nopadding {
     padding: 0;
 }
 
-.panel{
+.panel {
     background-color: var(--color-quaternari);
     display: flex;
 }
-    
-.inputs{  
+
+.inputs {
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
     width: 33%;
+    color: var(--color-secundari);
 }
 
-.inputs input{
+.inputs input {
     width: 100%;
     height: 32px;
     border-radius: 5px;
 }
 
-label{
+label {
     display: block;
     padding-bottom: 13px;
 }
 
-.baixa{
+.baixa {
     padding-top: 15px;
 }
 
-.botons{
+.botons {
     display: flex;
     padding-right: 13px;
     padding-top: 12px;
     padding-bottom: 13px;
     gap: 16px;
 }
-.botons button{
+
+.botons button {
     width: 103px;
     height: 37px;
     border-radius: 5px;
     border: none;
-    color: var(--color-quaternari);
+    color: var(--color-quinari);
 }
 
-.cercar{
+.botons button:hover {
+    font-weight: bold;
+}
+
+.cercar {
     background-color: var(--color-terciari);
 }
 
-.netejar{
+.netejar {
     background-color: var(--color-senari);
+}
+
+.amagaEscritori {
+    display: none;
+}
+
+@media (max-width: 765px) {
+    .mostraMovil {
+        display: flex;
+    }
+
+    .amagaMovil {
+        display: none;
+    }
+
+    .header .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header .col-6 {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    .hamburguesa {
+        font-size: 40px;
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    .logo {
+        margin-left: 100px;
+    }
+
+    .header-dreta {
+        margin-left: 110px;
+    }
+
+    .persona {
+        height: 60px;
+    }
+
+    /*
+    He creat este estil perque hi ha un bug que al obrir el desplegable i 
+    despres tancar-lo si estires la pantalla el menu no apareix, pensaba que
+    aixo ho solucionaria perque he pensat que al modificar el menu.style.display 
+    en el js podria afectar al style del menu de escritori, al final no ho he
+    solucionat, pero ho deixe per aci per a que veges que ho he intentat com
+    bonament he pogut i no et sorprenga la existencia de dos classes per al menu :)
+    */
+    .menuMovil{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        display: none;
+    }
+
+    .panel {
+        display: block;
+    }
+
+    .inputs {
+        padding-top: 10px;
+        padding-bottom: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        color: var(--color-secundari);
+    }
+
+    .botons {
+    display:block;
+    
+    padding-right: 13px;
+    padding-left: 15px;
+    padding-top: 12px;
+    margin-bottom: 13px;
+}
+    .cercar{
+        margin-bottom: 10px;
+    }
+
+    .botons button {
+    width: 100%;
+}
+
+.baixa {
+    padding-top: 0px;
+}
+
 }

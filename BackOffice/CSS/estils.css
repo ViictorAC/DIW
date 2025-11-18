@@ -3,9 +3,10 @@
 body{
 --color-primari: #539041;
 --color-secundari: #47488e;
---color-terciari: groc;
+--color-terciari: #f6b01f;
 --color-quaternari: #ececec;
 --color-quinari: #ffffff;
+--color-senari: #94949d;
 font-family: "Roboto", sans-serif;
 }
 
@@ -119,4 +120,27 @@ label{
 
 .baixa{
     padding-top: 15px;
+}
+
+.botons{
+    display: flex;
+    padding-right: 13px;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    gap: 16px;
+}
+.botons button{
+    width: 103px;
+    height: 37px;
+    border-radius: 5px;
+    border: none;
+    color: var(--color-quaternari);
+}
+
+.cercar{
+    background-color: var(--color-terciari);
+}
+
+.netejar{
+    background-color: var(--color-senari);
 }

@@ -1,131 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/template_grid3.css" />
-    <link rel="stylesheet" href="CSS/normalize.css" />
-    <link rel="stylesheet" href="CSS/estils.css" />
-    <script src="https://kit.fontawesome.com/db778d1b82.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <title>BackOffice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estils.css">
+    <title>Home Selectio</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="js/common.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6">
-                    <div class="hamburguesa amagaEscritori mostraMovil">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <div>
-                        <img src="recursos/img/logo_tendafake.png" alt="logo" class="logo" />
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="header-dreta a_la_dreta">
-                        <img src="recursos/img/foto_persona.png" alt="foto_persona" class="persona" />
-                        <span class="nom amagaMovil">Manolo Garibolo</span>
-                        <a href="" class="sortirSessio amagaMovil"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container-fluid titol">
-        <div class="row">
-            <div class="col-12">
-                <p>Llistat d'usuaris</p>
-            </div>
-        </div>
-    </div>
-
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2 nopadding">
-                <div class="menu menuMovil">
-                    <ul>
-                        <a href="">
-                            <li><i class="fa-solid fa-paperclip" id="atributs"></i>Atributs</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-cart-shopping"></i>Carrets</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-person"></i>Clients</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-sliders"></i>Configuracions</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-pen-to-square"></i>Comandes</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-chart-line"></i>Estadístiques</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-list"></i>Famílies</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-location-dot"></i>Localitzacions</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-tag"></i>Ofertes</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fa-solid fa-city"></i>Productes</li>
-                        </a>
-                        <a href="">
-                            <li class="paginaActiva"><i class="fa-solid fa-user "></i>Usuaris</li>
-                        </a>
-                        <a href="">
-                            <li class="amagaEscritori mostraMovil">
-                                <i class="fa-solid fa-arrow-right-from-bracket"></i>Eixir
+            <div class="col-12 p-0 pe-2 fixed-top">
+                <nav class="navbar navbar-expand-lg bg-white position-relative">
+                    <!--Header-->
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand d-flex align-items-center" href="#">
+                                <i class="bi bi-lightbulb-fill text-warning fs-5"></i>
+                                <span class="fs-5 fw-bolder px-3 py-2">SELECTIO</span>
+                            </a>
+                            <form class="ps-3 d-none d-md-block" role="search">
+                                <div class="input-group">
+                                    <button class="btn btn-light border-light-subtle" type="button" id="search">
+                                        <i class="bi bi-search text-dark"></i>
+                                    </button>
+                                        <input type="text" class="form-control bg_cercar border-light-subtle rounded-0 pe-5" placeholder="Cercar producte ..."
+                                        aria-label="Search" aria-describedby="button-search">
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <ul class="navbar-nav ms-auto gap-lg-3 border-top border-lg-0 pt-3 pt-lg-03"> -->
+                        <ul class="navbar-nav ms-auto d-flex align-items-center me-3 d-none d-md-flex">
+                            <li class="nav-item"><a class="nav-link active" href="#">Portàtils</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">Mòbils</a></li>
+
+                            <!-- Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                                    Totes les categories
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Components</a></li>
+                                    <li><a class="dropdown-item mb-2" href="#">Perifèrics</a></li>
+                                    <li class="border-top"></li>
+                                    <li><a class="dropdown-item mt-2" href="#">Consoles</a></li>
+                                    <li><a class="dropdown-item" href="#">Videojocs</a></li>
+                                </ul>
                             </li>
-                        </a>
-                    </ul>
-                </div>
+                            <li class="nav-item"><a class="nav-link active" href="#">Ofertes</a></li>
+                        </ul>
+
+                        <div class="d-flex me-0 me-md-4 gap-3">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-cart-fill fs-3 position-relative"></i>
+                                <span class="position-absolute top-40 start-10 translate-middle badge rounded-pill bg-danger">
+                                    2
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+
+                            <a class="nav-link" href="#"><i class="bi bi-person fs-3 px-1"></i></a>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#menuMobile" aria-controls="menuMobile"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+                        <form class="d-flex d-lg-none w-100" role="search">
+                            <div class="input-group">
+                                <button class="btn btn-light border-light-subtle" type="button" id="search">
+                                    <i class="bi bi-search text-dark"></i>
+                                </button>
+                                    <input type="text" class="form-control bg_cercar border-light-subtle rounded-0 pe-5" placeholder="Cercar producte ..."
+                                    aria-label="Search" aria-describedby="button-search">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!--Desplegable header-->
+                    <div class="collapse navbar-collapse position-absolute top-100 start-0 w-100 bg-white shadow-lg z-3 px-2 pb-1" id="menuMobile">
+                        <ul class="navbar-nav ms-auto px-3 d-lg-none">
+                            <li class="nav-item"><a class="nav-link active" href="#">Portàtils</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">Mòbils</a></li>
+
+                            <!-- Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                                    Totes les categories
+                                </a>
+                                <ul class="dropdown-menu tot">
+                                    <li><a class="dropdown-item" href="#">Components</a></li>
+                                    <li><a class="dropdown-item mb-2" href="#">Perifèrics</a></li>
+                                    <li class="border-top"></li>
+                                    <li><a class="dropdown-item mt-2" href="#">Consoles</a></li>
+                                    <li><a class="dropdown-item" href="#">Videojocs</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link active" href="#">Ofertes</a></li>
+                        </ul>          
+                    </div>
+                </nav>
             </div>
-            <div class="col-10 nopadding">
-                <div class="panel">
-                    <div class="inputs">
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom" />
+        </div>
+
+        <!--Main-->
+        <div class="row bg_gris pt-2 mt-5">
+            <div class="col-12">
+                <div class="container-xxl px-0 px-md-4 px-xxl-0 mt-5 mt-lg-4">
+                    <!--Primera targeta-->
+                    <div class="row mb-4 px-0 pt-2">
+                        <div class="card mb-3 mt-4 shadow-lg border-0">
+                            <div class="row py-0 py-md-4 rounded pe-0 pe-md-4 gx-3">
+                                <div class="col-md-6 d-flex align-items-center ps-3 ps-lg-1 pe-2 pb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Novetats</h5>
+                                        <h1 class="lh-1 titol_primera_targeta bolder negreta">El futur de la tecnologia està ací</h1>
+                                        <p class="card-text fs-5 mb-4 pe-1">Actualitza't hui amb els últims accesoris d'alt rendiment amb dissenys moderns.</p>
+                                        <a href="#" class="btn btn-primary fw-bold px-3 py-2">Comprar</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-md-5 px-4 px-md-0">
+                                    <div class="px-2 px-lg-0 pe-0 pe-lg-2 pb-4 pb-lg-0">
+                                        <img src="img/img-1.png" class="img-fluid rounded-end w-100" alt="Imatge de fons">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="inputs">
-                        <label for="cognom">Cognoms</label>
-                        <input type="text" name="cognom" />
+                    <!--Comprar per categoria-->
+                    <div class="row mb-2">
+                        <div class="col-12 d-flex justify-content-between align-items-start pb-2 pt-2">
+                            <h3>Comprar per categoria</h3>
+                            <a class="icon-link pt-1 text-decoration-none" href="#">
+                                <span>Veure totes</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="inputs">
-                        <label for="dni">Dni</label>
-                        <input type="text" name="dni" />
+                    <div class="row bg-white rounded shadow-lg p-2 pt-5 mb-3">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 pt-4">
+                                <img src="img/img-2.png" class="card-img-top" alt="Portàtils">
+                                <div class="card-body text-center pt-4">
+                                    <p class="card-text fw-bold">Portàtils</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 pt-4">
+                                <img src="img/img-3.png" class="card-img-top" alt="Mòbils">
+                                <div class="card-body text-center pt-4">
+                                    <p class="card-text fw-bold">Mòbils</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 pt-4">
+                                <img src="img/img-4.png" class="card-img-top" alt="Audio">
+                                <div class="card-body text-center pt-4">
+                                    <p class="card-text fw-bold">Audio</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 pt-4">
+                                <img src="img/img-5.png" class="card-img-top" alt="Wearables">
+                                <div class="card-body text-center pt-4">
+                                    <p class="card-text fw-bold">Wearables</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="panel baixa">
-                    <div class="inputs">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" />
+                    <!--Oferta limitada-->
+                    <div class="row mb-4">
+                        <div class="card mb-2 mt-4 shadow-lg border-0 bg_blau_clar">
+                            <div class="row py-5 rounded pe-4 ps-2">
+                                <div class="col-md-8 d-flex align-items-center">
+                                    <div class="card-body pb-5">
+                                        <div class="d-flex align-items-center justify-content-center w-25 border-0 rounded-pill p-2 bg_seleccionar text-primary my-3 mt-4 tot">
+                                            <i class="bi bi-clock-fill me-1"></i>
+                                            OFERTA LIMITADA
+                                        </div>
+                                        <h1 class="card-title negreta mb-3">Ofertes exprés de tecnologia</h1>
+                                        <p class="card-text fs-5 mb-4">Aconsegueix fins un 30% de descompte en dispositius intel·ligents per a casa. Modernitza el teu llar amb la nova IA.</p>
+                                        <a href="#" class="btn btn-dark fw-bold p-3">Explorar ofertes</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ps-5">
+                                    <img src="img/img-6.png" class="img-fluid rounded-4 me-3 img_primera_targeta" alt="Imatge de fons">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
+                    <!--Tendencies-->
+                    <div class="row mb-3">
+                        <div class="col-12 d-flex justify-content-between align-items-center pb-2 pt-2">
+                            <h3>Tendències actuals</h3>
+                            <div>
+                                <a class="icon-link link-dark fs-4 fw-bolder" href="#">
+                                    <i class="bi bi-arrow-left"></i>
+                                </a>
+                                <a class="icon-link link-dark fs-4 ps-2 fw-bold" href="#">
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="panel a_la_dreta">
-                    <div class="botons ">
-                        <button class="cercar"><i class="fa-solid fa-magnifying-glass"></i>Cercar</button>
-                        <button class="netejar"><i class="fa-solid fa-xmark"></i>Netejar</button>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 mt-1 mb-5">
+                        <div class="col">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <a href="#">
+                                        <img src="img/img-7.png" class="card-img-top" alt="Afegir a favorit">
+                                    </a>
+                                    <span class="position-absolute top-0 end-0 rounded-circle bg-danger m-2 mx-3 p-3 px-0 badge">
+                                        <a href="#" class="p-3">
+                                            <i class="bi bi-heart text-white"></i>
+                                        </a>
+                                        <span class="visually-hidden">favorits</span>
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="pb-3 d-flex">
+                                        <i class="bi bi-star-fill text-warning pe-2"></i>
+                                        <span class="text-primary pe-1">4.8</span>
+                                        (128)
+                                    </div>
+                                    <a href="#" class="link-underline-opacity-0 link-dark"><h5 class="card-title negreta">Sony WH-1000XM5</h5></a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <span class="text-primary fs-3">348&euro;</span>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-cart-plus-fill fs-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <a href="#">
+                                        <img src="img/img-8.png" class="card-img-top" alt="Afegir a favorit">
+                                    </a>
+                                    <span class="position-absolute top-0 end-0 rounded-circle bg-danger m-2 mx-3 p-3 px-0 badge">
+                                        <a href="#" class="p-3">
+                                            <i class="bi bi-heart text-white"></i>
+                                        </a>
+                                        <span class="visually-hidden">favorits</span>
+                                    </span>
+
+                                    <span class="position-absolute top-0 start-0 rounded bg-primary m-2 mx-3 p-3 px-0 badge">
+                                        <a href="#" class="p-3 link-light link-underline-opacity-0">
+                                            Novetat
+                                        </a>
+                                        <span class="visually-hidden">novetat</span>
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="pb-3 d-flex">
+                                        <i class="bi bi-star-fill text-warning pe-2"></i>
+                                        <span class="text-primary pe-1">4.9</span>
+                                        (85)
+                                    </div>
+                                    <a href="#" class="link-underline-opacity-0 link-dark"><h5 class="card-title negreta">Canon EOS R6</h5></a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <span class="text-primary fs-3">2499&euro;</span>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-cart-plus-fill fs-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <a href="#">
+                                        <img src="img/img-9.png" class="card-img-top" alt="Afegir a favorit">
+                                    </a>
+                                    <span class="position-absolute top-0 end-0 rounded-circle bg-danger m-2 mx-3 p-3 px-0 badge">
+                                        <a href="#" class="p-3">
+                                            <i class="bi bi-heart text-white"></i>
+                                        </a>
+                                        <span class="visually-hidden">favorits</span>
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="pb-3 d-flex">
+                                        <i class="bi bi-star-fill text-warning pe-2"></i>
+                                        <span class="text-primary pe-1">4.7</span>
+                                        (259)
+                                    </div>
+                                    <a href="#" class="link-underline-opacity-0 link-dark"><h5 class="card-title negreta">Google Nested Àudio</h5></a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <span class="text-primary fs-3">99,99&euro;</span>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-cart-plus-fill fs-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <a href="#">
+                                        <img src="img/img-10.png" class="card-img-top" alt="Afegir a favorit">
+                                    </a>
+                                    <span class="position-absolute top-0 end-0 rounded-circle bg-danger m-2 mx-3 p-3 px-0 badge">
+                                        <a href="#" class="p-3">
+                                            <i class="bi bi-heart text-white"></i>
+                                        </a>
+                                        <span class="visually-hidden">favorits</span>
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="pb-3 d-flex">
+                                        <i class="bi bi-star-fill text-warning pe-2"></i>
+                                        <span class="text-primary pe-1">4.8</span>
+                                        (173)
+                                    </div>
+                                    <a href="#" class="link-underline-opacity-0 link-dark"><h5 class="card-title negreta">Oculus Quest 2</h5></a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <span class="text-primary fs-3">299&euro;</span>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-cart-plus-fill fs-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Característiques-->
+                    <div class="row mb-5 pt-4">
+                        <div class="col-md-4 col-12 text-center pt-2 pt-md-1 ps-0">
+                                <i class="bi bi-truck fs-4 p-4 bg_seleccionar rounded-circle"></i>
+                                <h4 class="pt-5">Enviament gratuït</h4>
+                                <p>* A partir de 50 €</p>
+                        </div>
+
+                        <div class="col-md-4 col-12 text-center pt-5 pt-md-1">
+                            <i class="bi bi-shield-lock-fill fs-4 p-4 bg_seleccionar rounded-circle"></i>
+                                <h4 class="pt-5">Pagament segur</h4>
+                                <p>100% pagament segur amb encriptació SSL</p>
+                        </div>
+                        
+                        <div class="col-md-4 col-12 text-center pt-5 pt-md-1 ps-4">
+                            <i class="bi bi-headset fs-4 p-4 bg_seleccionar rounded-circle"></i>
+                                <h4 class="pt-5">Suport 24/7</h4>
+                                <p>Un equip dedicat a ajudar-te en qualsevol moment</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--Footer-->
+        <div class="row mt-5">
+             <div class="col-12">
+                <div class="container-xxl px-0 px-sm-4 px-xxl-0">
+                    <div class="row pt-2 pt-sm-4 pb-3 text-center text-sm-start">
+                        <div class="col-lg-3 col-md-6 col-12 ps-4 pb-3 pb-sm-0">
+                            <div class="d-flex align-items-center pb-3 justify-content-center justify-content-sm-start">
+                                <i class="bi bi-lightbulb-fill text-warning fs-3"></i>
+                                <span class="fs-3 px-2">SELECTIO</span>
+                            </div>
+                            <span class="text-secondary pe-3">La teua tenda online per a les últimes novetats en tecnologia. Millora les teues destreses digitals hui.</span>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 pt-5 pt-sm-0 ps-2">
+                            <h2 class="fs-3 px-3 pt-1 fw-normal">TENDA</h2>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action border-0">Portàtils</a>
+                                <a href="#" class="list-group-item list-group-item-action border-0">Mòbils</a>
+                                <a href="#" class="list-group-item list-group-item-action border-0">Accesoris</a>
+                                <a href="#" class="list-group-item list-group-item-action border-0">Ofertes</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 pt-5 pt-sm-0 ps-2">
+                            <h2 class="fs-3 px-3 pt-1  fw-normal">POLÍTIQUES</h2>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action border-0">Condicions generals</a>
+                                <a href="#" class="list-group-item list-group-item-action border-0">Política de privacitat</a>
+                                <a href="#" class="list-group-item list-group-item-action border-0">Preferències de cookies</a>
+                                <a href="#" class="list-group-item list-group-item-action border-0">Avís legal</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 pt-5 pt-sm-0 ps-2">
+                            <h2 class="fs-3 px-3 pt-1  fw-normal">XARXES SOCIALS</h2>
+                            <div class="list-group list-group-flush">
+                                <a href="https://www.facebook.com" class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-center justify-content-sm-start">
+                                    <i class="bi bi-facebook fs-2 pe-2"></i>
+                                    <span class="d-none d-sm-block">Facebook</span>
+                                </a>
+                                <a href="https://es.linkedin.com/" class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-center justify-content-sm-start">
+                                    <i class="bi bi-linkedin fs-2 pe-2"></i>
+                                    <span class="d-none d-sm-block">Linkedin</span>
+                                </a>
+                                <a href="https://www.instagram.com/" class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-center justify-content-sm-start">
+                                    <i class="bi bi-instagram fs-2 pe-2"></i>
+                                    <span class="d-none d-sm-block">Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row border-top pt-3">
+                        <div class="col-12 text-center">
+                            <p class="small">@ 2025 Selectio</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
 </body>
-<script src="funcions.js"></script>
 </html>
